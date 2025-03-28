@@ -26,7 +26,7 @@ def convert():
             title = item.findtext("title", "No title")
             description = item.findtext("description", "No description")
             link = item.findtext("link", "#")
-            price = item.findtext("{http://base.google.com/ns/1.0}price", "N/A")
+            price = item.findtext("price", "N/A")
 
             markdown = f"""## {title}\n\n**Price:** {price}  \n**Description:** {description}  \n[View Product]({link})\n\n---\n"""
             markdown_list.append(markdown)
